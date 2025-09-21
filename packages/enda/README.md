@@ -1,0 +1,2 @@
+# enda
+.ent -> .dal
