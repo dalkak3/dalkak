@@ -1,0 +1,4448 @@
+export const snapshot = {};
+
+snapshot[`basic 1`] = `
+{
+  blocks: [],
+  children: [
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  960,
+                ],
+                [
+                  "set height",
+                  540,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_basic",
+                  [
+                    "number",
+                    "20",
+                  ],
+                  [
+                    [
+                      "change_scale_size",
+                      [
+                        "number",
+                        "0.5",
+                      ],
+                    ],
+                    [
+                      "add_effect_amount",
+                      "transparency",
+                      [
+                        "number",
+                        "5",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      960,
+                    ],
+                    [
+                      "set height",
+                      540,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "StaffPicks.png",
+            },
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      960,
+                    ],
+                    [
+                      "set height",
+                      540,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "staff2",
+            },
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      960,
+                    ],
+                    [
+                      "set height",
+                      540,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "both",
+            },
+          ],
+          name: "StaffPicks.png",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  130,
+                ],
+                [
+                  "set height",
+                  113,
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "38",
+              [
+                [
+                  "locate_y",
+                  [
+                    "number",
+                    "-50",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "40",
+              [
+                [
+                  "locate_y",
+                  [
+                    "number",
+                    "-90",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "37",
+              [
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "-50",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "k21u",
+                      [
+                        "text",
+                        "2",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "k21u",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "message_cast",
+                  "2pt4",
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "39",
+              [
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "-50",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "k21u",
+                      [
+                        "text",
+                        "2",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "k21u",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "message_cast",
+                  "2pt4",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      130,
+                    ],
+                    [
+                      "set height",
+                      113,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "삼각형_1",
+            },
+          ],
+          name: "삼각형2",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  320,
+                ],
+                [
+                  "set height",
+                  89,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "0.5",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "start_scene",
+                  "8den",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "set_variable",
+                  "u1fc",
+                  [
+                    "text",
+                    "20",
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "135",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "get_variable",
+                        "u1fc",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "u1fc",
+                      [
+                        "calc_basic",
+                        [
+                          "get_variable",
+                          "u1fc",
+                        ],
+                        "MULTI",
+                        [
+                          "number",
+                          "0.9",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      320,
+                    ],
+                    [
+                      "set height",
+                      89,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Rank",
+            },
+          ],
+          name: "Locked_Cube_Rank2",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  116.8,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "hide",
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "show",
+                ],
+              ],
+            ],
+            [
+              "when_run_button_click",
+              [
+                [
+                  "set_variable",
+                  "zgkp",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "32",
+              [
+                [
+                  "set_variable",
+                  "zgkp",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_run_button_click",
+              [
+                [
+                  "set_visible_answer",
+                  "HIDE",
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자2",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  80.8,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "hide",
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "show",
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자1",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  80.8,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "hide",
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "show",
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  432,
+                ],
+                [
+                  "set height",
+                  80,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "-0.1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "set_variable",
+                  "k21u",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+                [
+                  "message_cast",
+                  "2pt4",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "set_variable",
+                  "wcex",
+                  [
+                    "text",
+                    "25",
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "135",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "get_variable",
+                        "wcex",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "wcex",
+                      [
+                        "calc_basic",
+                        [
+                          "get_variable",
+                          "wcex",
+                        ],
+                        "MULTI",
+                        [
+                          "number",
+                          "0.9",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "get_variable",
+                      "k21u",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "1",
+                    ],
+                  ],
+                  [
+                    [
+                      "start_scene",
+                      "ui5v",
+                    ],
+                  ],
+                  [
+                    [
+                      "start_scene",
+                      "8p1r",
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      432,
+                    ],
+                    [
+                      "set height",
+                      80,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Howtoplay",
+            },
+          ],
+          name: "Locked_Cube_Howtopla",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  318,
+                ],
+                [
+                  "set height",
+                  171,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "set_variable",
+                  "3uwz",
+                  [
+                    "text",
+                    "20",
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "135",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "get_variable",
+                        "3uwz",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "3uwz",
+                      [
+                        "calc_basic",
+                        [
+                          "get_variable",
+                          "3uwz",
+                        ],
+                        "MULTI",
+                        [
+                          "number",
+                          "0.9",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      318,
+                    ],
+                    [
+                      "set height",
+                      171,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_dark",
+            },
+          ],
+          name: "Locked_Cube_dark",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  430,
+                ],
+                [
+                  "set height",
+                  88,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "0.1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "set_variable",
+                  "k21u",
+                  [
+                    "text",
+                    "2",
+                  ],
+                ],
+                [
+                  "message_cast",
+                  "2pt4",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "set_variable",
+                  "xis6",
+                  [
+                    "text",
+                    "20",
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "135",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "get_variable",
+                        "xis6",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "xis6",
+                      [
+                        "calc_basic",
+                        [
+                          "get_variable",
+                          "xis6",
+                        ],
+                        "MULTI",
+                        [
+                          "number",
+                          "0.9",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+              ],
+            ],
+            [
+              "when_void",
+              [
+                [
+                  "coordinate_object",
+                  "self",
+                  "x",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      430,
+                    ],
+                    [
+                      "set height",
+                      88,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Gamestar",
+            },
+          ],
+          name: "Locked_Cube_Gamestar",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  487,
+                ],
+                [
+                  "set height",
+                  64,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "set_variable",
+                      "hsnh",
+                      [
+                        "calc_rand",
+                        [
+                          "number",
+                          "0",
+                        ],
+                        [
+                          "number",
+                          "1",
+                        ],
+                      ],
+                    ],
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "0.1",
+                      ],
+                    ],
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "hsnh",
+                        ],
+                        "EQUAL",
+                        [
+                          "text",
+                          "1",
+                        ],
+                      ],
+                      [
+                        [
+                          "flip_x",
+                        ],
+                      ],
+                      [
+                        [
+                          "flip_y",
+                        ],
+                      ],
+                    ],
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "0.1",
+                      ],
+                    ],
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "hsnh",
+                        ],
+                        "EQUAL",
+                        [
+                          "text",
+                          "1",
+                        ],
+                      ],
+                      [
+                        [
+                          "flip_x",
+                        ],
+                      ],
+                      [
+                        [
+                          "flip_y",
+                        ],
+                      ],
+                    ],
+                    [
+                      "wait_second",
+                      [
+                        "calc_rand",
+                        [
+                          "number",
+                          "1",
+                        ],
+                        [
+                          "number",
+                          "3.5",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_run_button_click",
+              [
+                [
+                  "sound_something_with_block",
+                  [
+                    "get_sounds",
+                    "ysxt",
+                  ],
+                ],
+                [
+                  "start_scene",
+                  "7dwq",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "2pt4",
+              [
+                [
+                  "set_variable",
+                  "otlb",
+                  [
+                    "text",
+                    "20",
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "coordinate_object",
+                      "self",
+                      "y",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "135",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "get_variable",
+                        "otlb",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "otlb",
+                      [
+                        "calc_basic",
+                        [
+                          "get_variable",
+                          "otlb",
+                        ],
+                        "MULTI",
+                        [
+                          "number",
+                          "0.9",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "hide",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      487,
+                    ],
+                    [
+                      "set height",
+                      64,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube",
+            },
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set src",
+                      "1d75a2c43a5cf037fea41022eb8b3e39",
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "02_8-BITch",
+            },
+          ],
+          name: "Locked_Cube",
+        },
+      ],
+      name: "장면 1",
+    },
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  50.86,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "text_write",
+                      [
+                        "get_variable",
+                        "vve8",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "0.5",
+                      ],
+                    ],
+                    [
+                      "change_variable",
+                      "vve8",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "set_variable",
+                  "w5lz",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+                [
+                  "set_variable",
+                  "vve8",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+                [
+                  "set_variable",
+                  "66hm",
+                  [
+                    "text",
+                    "3",
+                  ],
+                ],
+                [
+                  "wait_until_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "text",
+                      "0",
+                    ],
+                    "GREATER_OR_EQUAL",
+                    [
+                      "get_variable",
+                      "66hm",
+                    ],
+                  ],
+                ],
+                [
+                  "start_scene",
+                  "p9wo",
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자5",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  113,
+                ],
+                [
+                  "set height",
+                  99,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "66hm",
+                        ],
+                        "GREATER_OR_EQUAL",
+                        [
+                          "text",
+                          "1",
+                        ],
+                      ],
+                      [
+                        [
+                          "show",
+                        ],
+                      ],
+                      [
+                        [
+                          "hide",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      113,
+                    ],
+                    [
+                      "set height",
+                      99,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "하트(1)_1",
+            },
+          ],
+          name: "하트(1)2",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  113,
+                ],
+                [
+                  "set height",
+                  99,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "66hm",
+                        ],
+                        "GREATER_OR_EQUAL",
+                        [
+                          "text",
+                          "2",
+                        ],
+                      ],
+                      [
+                        [
+                          "show",
+                        ],
+                      ],
+                      [
+                        [
+                          "hide",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      113,
+                    ],
+                    [
+                      "set height",
+                      99,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "하트(1)_1",
+            },
+          ],
+          name: "하트(1)1",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  113,
+                ],
+                [
+                  "set height",
+                  99,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "66hm",
+                        ],
+                        "GREATER_OR_EQUAL",
+                        [
+                          "text",
+                          "3",
+                        ],
+                      ],
+                      [
+                        [
+                          "show",
+                        ],
+                      ],
+                      [
+                        [
+                          "hide",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      113,
+                    ],
+                    [
+                      "set height",
+                      99,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "하트(1)_1",
+            },
+          ],
+          name: "하트(1)",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  130,
+                ],
+                [
+                  "set height",
+                  113,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "hide",
+                ],
+                [
+                  "wait_second",
+                  [
+                    "number",
+                    "0.5",
+                  ],
+                ],
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "create_clone",
+                      "self",
+                    ],
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_clone_start",
+              [
+                [
+                  "show",
+                ],
+                [
+                  "set_variable",
+                  "40rv",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_rand",
+                      [
+                        "number",
+                        "0",
+                      ],
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "1",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "ewoq",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "ewoq",
+                      [
+                        "text",
+                        "-1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_rand",
+                      [
+                        "number",
+                        "0",
+                      ],
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "1",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "svzk",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "svzk",
+                      [
+                        "text",
+                        "-1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "rotate_absolute",
+                  [
+                    "calc_basic",
+                    [
+                      "calc_basic",
+                      [
+                        "number",
+                        "-90",
+                      ],
+                      "MULTI",
+                      [
+                        "get_variable",
+                        "svzk",
+                      ],
+                    ],
+                    "MINUS",
+                    [
+                      "number",
+                      "90",
+                    ],
+                  ],
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "calc_basic",
+                    [
+                      "get_variable",
+                      "ewoq",
+                    ],
+                    "MULTI",
+                    [
+                      "number",
+                      "17.4",
+                    ],
+                  ],
+                  [
+                    "calc_basic",
+                    [
+                      "get_variable",
+                      "svzk",
+                    ],
+                    "MULTI",
+                    [
+                      "number",
+                      "135",
+                    ],
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_operation",
+                      [
+                        "coordinate_object",
+                        "self",
+                        "x",
+                      ],
+                      "abs",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "240",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_y",
+                      [
+                        "calc_basic",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "40rv",
+                          ],
+                          "MULTI",
+                          [
+                            "number",
+                            "-1",
+                          ],
+                        ],
+                        "MULTI",
+                        [
+                          "get_variable",
+                          "svzk",
+                        ],
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "40rv",
+                      [
+                        "calc_basic",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "40rv",
+                          ],
+                          "MULTI",
+                          [
+                            "number",
+                            "1.01",
+                          ],
+                        ],
+                        "PLUS",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "xanc",
+                          ],
+                          "DIVIDE",
+                          [
+                            "number",
+                            "1000",
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "delete_clone",
+                ],
+              ],
+            ],
+            [
+              "when_void",
+              [
+                [
+                  "angle",
+                  90,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      130,
+                    ],
+                    [
+                      "set height",
+                      113,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "삼각형_1",
+            },
+          ],
+          name: "삼각형1",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  130,
+                ],
+                [
+                  "set height",
+                  113,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "hide",
+                ],
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "create_clone",
+                      "self",
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_clone_start",
+              [
+                [
+                  "show",
+                ],
+                [
+                  "set_variable",
+                  "81mq",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_rand",
+                      [
+                        "number",
+                        "0",
+                      ],
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "1",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "6gvb",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "6gvb",
+                      [
+                        "text",
+                        "-1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_rand",
+                      [
+                        "number",
+                        "0",
+                      ],
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "1",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "digm",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "digm",
+                      [
+                        "text",
+                        "-1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "rotate_absolute",
+                  [
+                    "calc_basic",
+                    [
+                      "number",
+                      "-90",
+                    ],
+                    "MULTI",
+                    [
+                      "get_variable",
+                      "6gvb",
+                    ],
+                  ],
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "calc_basic",
+                    [
+                      "get_variable",
+                      "6gvb",
+                    ],
+                    "MULTI",
+                    [
+                      "number",
+                      "240",
+                    ],
+                  ],
+                  [
+                    "calc_basic",
+                    [
+                      "get_variable",
+                      "digm",
+                    ],
+                    "MULTI",
+                    [
+                      "number",
+                      "17.4",
+                    ],
+                  ],
+                ],
+                [
+                  "repeat_while_true",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "calc_operation",
+                      [
+                        "coordinate_object",
+                        "self",
+                        "x",
+                      ],
+                      "abs",
+                    ],
+                    "GREATER",
+                    [
+                      "text",
+                      "240",
+                    ],
+                  ],
+                  "until",
+                  [
+                    [
+                      "move_x",
+                      [
+                        "calc_basic",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "81mq",
+                          ],
+                          "MULTI",
+                          [
+                            "number",
+                            "-1",
+                          ],
+                        ],
+                        "MULTI",
+                        [
+                          "get_variable",
+                          "6gvb",
+                        ],
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "81mq",
+                      [
+                        "calc_basic",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "81mq",
+                          ],
+                          "MULTI",
+                          [
+                            "number",
+                            "1.01",
+                          ],
+                        ],
+                        "PLUS",
+                        [
+                          "calc_basic",
+                          [
+                            "get_variable",
+                            "xanc",
+                          ],
+                          "DIVIDE",
+                          [
+                            "number",
+                            "1000",
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "delete_clone",
+                ],
+              ],
+            ],
+            [
+              "when_void",
+              [
+                [
+                  "angle",
+                  90,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      130,
+                    ],
+                    [
+                      "set height",
+                      113,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "삼각형_1",
+            },
+          ],
+          name: "삼각형",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  101,
+                ],
+                [
+                  "set height",
+                  101,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "_if",
+                      [
+                        "is_press_some_key",
+                        "37",
+                      ],
+                      [
+                        [
+                          "locate_x",
+                          [
+                            "calc_basic",
+                            [
+                              "calc_basic",
+                              [
+                                "number",
+                                "139",
+                              ],
+                              "DIVIDE",
+                              [
+                                "number",
+                                "8",
+                              ],
+                            ],
+                            "MULTI",
+                            [
+                              "number",
+                              "-1",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "_if",
+                      [
+                        "is_press_some_key",
+                        "39",
+                      ],
+                      [
+                        [
+                          "locate_x",
+                          [
+                            "calc_basic",
+                            [
+                              "number",
+                              "139",
+                            ],
+                            "DIVIDE",
+                            [
+                              "number",
+                              "8",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_run_button_click",
+              [
+                [
+                  "start_scene",
+                  "8p1r",
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "_if",
+                      [
+                        "is_press_some_key",
+                        "40",
+                      ],
+                      [
+                        [
+                          "locate_y",
+                          [
+                            "calc_basic",
+                            [
+                              "calc_basic",
+                              [
+                                "number",
+                                "139",
+                              ],
+                              "DIVIDE",
+                              [
+                                "number",
+                                "8",
+                              ],
+                            ],
+                            "MULTI",
+                            [
+                              "number",
+                              "-1",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "_if",
+                      [
+                        "is_press_some_key",
+                        "38",
+                      ],
+                      [
+                        [
+                          "locate_y",
+                          [
+                            "calc_basic",
+                            [
+                              "number",
+                              "139",
+                            ],
+                            "DIVIDE",
+                            [
+                              "number",
+                              "8",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "wait_until_true",
+                      [
+                        "boolean_not",
+                        [
+                          "boolean_or",
+                          [
+                            "reach_something",
+                            "no6d",
+                          ],
+                          [
+                            "reach_something",
+                            "egvd",
+                          ],
+                        ],
+                      ],
+                    ],
+                    [
+                      "wait_until_true",
+                      [
+                        "boolean_or",
+                        [
+                          "reach_something",
+                          "no6d",
+                        ],
+                        [
+                          "reach_something",
+                          "egvd",
+                        ],
+                      ],
+                    ],
+                    [
+                      "_if",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "w5lz",
+                        ],
+                        "EQUAL",
+                        [
+                          "text",
+                          "0",
+                        ],
+                      ],
+                      [
+                        [
+                          "message_cast",
+                          "onc3",
+                        ],
+                        [
+                          "change_variable",
+                          "66hm",
+                          [
+                            "text",
+                            "-1",
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "onc3",
+              [
+                [
+                  "set_variable",
+                  "w5lz",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+                [
+                  "wait_second",
+                  [
+                    "number",
+                    "1",
+                  ],
+                ],
+                [
+                  "set_variable",
+                  "w5lz",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "_if",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "get_variable",
+                          "w5lz",
+                        ],
+                        "EQUAL",
+                        [
+                          "text",
+                          "1",
+                        ],
+                      ],
+                      [
+                        [
+                          "wait_second",
+                          [
+                            "number",
+                            "0.1",
+                          ],
+                        ],
+                        [
+                          "hide",
+                        ],
+                        [
+                          "wait_second",
+                          [
+                            "number",
+                            "0.1",
+                          ],
+                        ],
+                        [
+                          "show",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "set_variable",
+                  "xanc",
+                  [
+                    "text",
+                    "1",
+                  ],
+                ],
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "change_variable",
+                      "xanc",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      101,
+                    ],
+                    [
+                      "set height",
+                      101,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "마름모_1",
+            },
+          ],
+          name: "마름모",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  960,
+                ],
+                [
+                  "set height",
+                  540,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "set_random_color",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "-34.8",
+                  ],
+                  [
+                    "number",
+                    "135",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "-34.8",
+                  ],
+                  [
+                    "number",
+                    "-135",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "0",
+                  ],
+                  [
+                    "number",
+                    "135",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "0",
+                  ],
+                  [
+                    "number",
+                    "-135",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "34.8",
+                  ],
+                  [
+                    "number",
+                    "135",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "number",
+                    "34.8",
+                  ],
+                  [
+                    "number",
+                    "-135",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "-240",
+                  ],
+                  [
+                    "number",
+                    "-34.8",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "240",
+                  ],
+                  [
+                    "number",
+                    "-34.8",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "-240",
+                  ],
+                  [
+                    "number",
+                    "0",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "240",
+                  ],
+                  [
+                    "number",
+                    "0",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "-240",
+                  ],
+                  [
+                    "number",
+                    "34.8",
+                  ],
+                ],
+                [
+                  "start_drawing",
+                ],
+                [
+                  "locate_xy",
+                  [
+                    "text",
+                    "240",
+                  ],
+                  [
+                    "number",
+                    "34.8",
+                  ],
+                ],
+                [
+                  "stop_drawing",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      960,
+                    ],
+                    [
+                      "set height",
+                      540,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "새그림",
+            },
+          ],
+          name: "새 오브젝트13",
+        },
+      ],
+      name: "Game",
+    },
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  37.6,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자4",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  194.94,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자3",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  320,
+                ],
+                [
+                  "set height",
+                  145,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "calc_rand",
+                        [
+                          "number",
+                          "0.1",
+                        ],
+                        [
+                          "number",
+                          "0.3",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_run_button_click",
+              [
+                [
+                  "start_scene",
+                  "ui5v",
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "start_scene",
+                  "7dwq",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      320,
+                    ],
+                    [
+                      "set height",
+                      145,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_back",
+            },
+          ],
+          name: "Locked_Cube_back",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  508,
+                ],
+                [
+                  "set height",
+                  183,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      508,
+                    ],
+                    [
+                      "set height",
+                      183,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_howto",
+            },
+          ],
+          name: "Locked_Cube_howto",
+        },
+      ],
+      name: "How",
+    },
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  130,
+                ],
+                [
+                  "set height",
+                  113,
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "37",
+              [
+                [
+                  "locate_x",
+                  [
+                    "number",
+                    "-100",
+                  ],
+                ],
+                [
+                  "locate_y",
+                  [
+                    "number",
+                    "-20",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "39",
+              [
+                [
+                  "locate_x",
+                  [
+                    "number",
+                    "100",
+                  ],
+                ],
+                [
+                  "locate_y",
+                  [
+                    "number",
+                    "-20",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "40",
+              [
+                [
+                  "_if",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "text",
+                      "1",
+                    ],
+                    "LESS_OR_EQUAL",
+                    [
+                      "get_project_timer_value",
+                    ],
+                  ],
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "coordinate_object",
+                          "self",
+                          "x",
+                        ],
+                        "EQUAL",
+                        [
+                          "text",
+                          "-100",
+                        ],
+                      ],
+                      [
+                        [
+                          "set_variable",
+                          "zgkp",
+                          [
+                            "text",
+                            "0",
+                          ],
+                        ],
+                      ],
+                      [
+                        [
+                          "if_else",
+                          [
+                            "boolean_basic_operator",
+                            [
+                              "coordinate_object",
+                              "self",
+                              "x",
+                            ],
+                            "EQUAL",
+                            [
+                              "text",
+                              "150",
+                            ],
+                          ],
+                          [
+                            [
+                              "start_scene",
+                              "8den",
+                            ],
+                          ],
+                          [
+                            [
+                              "start_scene",
+                              "8p1r",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_some_key_pressed",
+              "38",
+              [
+                [
+                  "locate_x",
+                  [
+                    "number",
+                    "150",
+                  ],
+                ],
+                [
+                  "locate_y",
+                  [
+                    "number",
+                    "120",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "choose_project_timer_action",
+                  "RESET",
+                ],
+                [
+                  "choose_project_timer_action",
+                  "START",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      130,
+                    ],
+                    [
+                      "set height",
+                      113,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "삼각형_1",
+            },
+          ],
+          name: "삼각형3",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  496.46,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자15",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  320,
+                ],
+                [
+                  "set height",
+                  89,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "set_variable",
+                  "doxd",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "0.5",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "start_scene",
+                  "8den",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      320,
+                    ],
+                    [
+                      "set height",
+                      89,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Rank",
+            },
+          ],
+          name: "Locked_Cube_Rank",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  409,
+                ],
+                [
+                  "set height",
+                  95,
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "set_variable",
+                  "zgkp",
+                  [
+                    "text",
+                    "0",
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "0.1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      409,
+                    ],
+                    [
+                      "set height",
+                      95,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Effectof",
+            },
+          ],
+          name: "Locked_Cube_Effectof",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  148.4,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자10",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  50.86,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "text_write",
+                      [
+                        "get_variable",
+                        "vve8",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자8",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  56.4,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자7",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  80.8,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자6",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  396,
+                ],
+                [
+                  "set height",
+                  56,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      396,
+                    ],
+                    [
+                      "set height",
+                      56,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_gameover",
+            },
+          ],
+          name: "Locked_Cube_gameover",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  169,
+                ],
+                [
+                  "set height",
+                  68,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "number",
+                        "-0.1",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "set_variable",
+                  "vmyg",
+                  [
+                    "text",
+                    "Guest",
+                  ],
+                ],
+                [
+                  "_if",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "get_variable",
+                      "doxd",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "0",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "nx3g",
+                      [
+                        "text",
+                        "0",
+                      ],
+                    ],
+                    [
+                      "message_cast",
+                      "evpi",
+                    ],
+                    [
+                      "set_variable",
+                      "doxd",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "start_scene",
+                  "8p1r",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "dc5l",
+              [
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "value_of_index_from_list",
+                      "23yd",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "LESS",
+                    [
+                      "get_variable",
+                      "vve8",
+                    ],
+                  ],
+                  [
+                    [
+                      "insert_value_to_list",
+                      [
+                        "get_variable",
+                        "vve8",
+                      ],
+                      "23yd",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "insert_value_to_list",
+                      [
+                        "get_variable",
+                        "vmyg",
+                      ],
+                      "dnn4",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "value_of_index_from_list",
+                          "23yd",
+                          [
+                            "number",
+                            "2",
+                          ],
+                        ],
+                        "LESS",
+                        [
+                          "get_variable",
+                          "vve8",
+                        ],
+                      ],
+                      [
+                        [
+                          "insert_value_to_list",
+                          [
+                            "get_variable",
+                            "vve8",
+                          ],
+                          "23yd",
+                          [
+                            "text",
+                            "2",
+                          ],
+                        ],
+                        [
+                          "insert_value_to_list",
+                          [
+                            "get_variable",
+                            "vmyg",
+                          ],
+                          "dnn4",
+                          [
+                            "text",
+                            "2",
+                          ],
+                        ],
+                      ],
+                      [
+                        [
+                          "if_else",
+                          [
+                            "boolean_basic_operator",
+                            [
+                              "value_of_index_from_list",
+                              "23yd",
+                              [
+                                "number",
+                                "3",
+                              ],
+                            ],
+                            "LESS",
+                            [
+                              "get_variable",
+                              "vve8",
+                            ],
+                          ],
+                          [
+                            [
+                              "insert_value_to_list",
+                              [
+                                "get_variable",
+                                "vve8",
+                              ],
+                              "23yd",
+                              [
+                                "text",
+                                "3",
+                              ],
+                            ],
+                            [
+                              "insert_value_to_list",
+                              [
+                                "get_variable",
+                                "vmyg",
+                              ],
+                              "dnn4",
+                              [
+                                "text",
+                                "3",
+                              ],
+                            ],
+                          ],
+                          [
+                            [
+                              "add_value_to_list",
+                              [
+                                "get_variable",
+                                "vve8",
+                              ],
+                              "23yd",
+                            ],
+                            [
+                              "add_value_to_list",
+                              [
+                                "get_variable",
+                                "vmyg",
+                              ],
+                              "dnn4",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      169,
+                    ],
+                    [
+                      "set height",
+                      68,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_retry",
+            },
+          ],
+          name: "Locked_Cube_retry",
+        },
+      ],
+      name: "Gameover",
+    },
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  118.4,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "_if",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "get_variable",
+                      "doxd",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "0",
+                    ],
+                  ],
+                  [
+                    [
+                      "ask_and_wait",
+                      [
+                        "text",
+                        "닉네임?",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "vmyg",
+                      [
+                        "get_canvas_input_value",
+                      ],
+                    ],
+                    [
+                      "set_variable",
+                      "nx3g",
+                      [
+                        "text",
+                        "0",
+                      ],
+                    ],
+                    [
+                      "message_cast",
+                      "evpi",
+                    ],
+                    [
+                      "set_variable",
+                      "doxd",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "text_write",
+                      [
+                        "text",
+                        "등록 완료",
+                      ],
+                    ],
+                    [
+                      "message_cast",
+                      "dc5l",
+                    ],
+                    [
+                      "wait_second",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "text_write",
+                      [
+                        "text",
+                        "랭킹 등록하기",
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "set_visible_answer",
+                  "HIDE",
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "message_cast",
+                  "dc5l",
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "evpi",
+              [
+                [
+                  "if_else",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "value_of_index_from_list",
+                      "23yd",
+                      [
+                        "number",
+                        "1",
+                      ],
+                    ],
+                    "LESS",
+                    [
+                      "get_variable",
+                      "vve8",
+                    ],
+                  ],
+                  [
+                    [
+                      "insert_value_to_list",
+                      [
+                        "get_variable",
+                        "vve8",
+                      ],
+                      "23yd",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                    [
+                      "insert_value_to_list",
+                      [
+                        "get_variable",
+                        "vmyg",
+                      ],
+                      "dnn4",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                  [
+                    [
+                      "if_else",
+                      [
+                        "boolean_basic_operator",
+                        [
+                          "value_of_index_from_list",
+                          "23yd",
+                          [
+                            "number",
+                            "2",
+                          ],
+                        ],
+                        "LESS",
+                        [
+                          "get_variable",
+                          "vve8",
+                        ],
+                      ],
+                      [
+                        [
+                          "insert_value_to_list",
+                          [
+                            "get_variable",
+                            "vve8",
+                          ],
+                          "23yd",
+                          [
+                            "text",
+                            "2",
+                          ],
+                        ],
+                        [
+                          "insert_value_to_list",
+                          [
+                            "get_variable",
+                            "vmyg",
+                          ],
+                          "dnn4",
+                          [
+                            "text",
+                            "2",
+                          ],
+                        ],
+                      ],
+                      [
+                        [
+                          "if_else",
+                          [
+                            "boolean_basic_operator",
+                            [
+                              "value_of_index_from_list",
+                              "23yd",
+                              [
+                                "number",
+                                "3",
+                              ],
+                            ],
+                            "LESS",
+                            [
+                              "get_variable",
+                              "vve8",
+                            ],
+                          ],
+                          [
+                            [
+                              "insert_value_to_list",
+                              [
+                                "get_variable",
+                                "vve8",
+                              ],
+                              "23yd",
+                              [
+                                "text",
+                                "3",
+                              ],
+                            ],
+                            [
+                              "insert_value_to_list",
+                              [
+                                "get_variable",
+                                "vmyg",
+                              ],
+                              "dnn4",
+                              [
+                                "text",
+                                "3",
+                              ],
+                            ],
+                          ],
+                          [
+                            [
+                              "add_value_to_list",
+                              [
+                                "get_variable",
+                                "vve8",
+                              ],
+                              "23yd",
+                            ],
+                            [
+                              "add_value_to_list",
+                              [
+                                "get_variable",
+                                "vmyg",
+                              ],
+                              "dnn4",
+                            ],
+                          ],
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자14",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  294,
+                ],
+                [
+                  "set height",
+                  58,
+                ],
+              ],
+            ],
+            [
+              "when_scene_start",
+              [
+                [
+                  "repeat_inf",
+                  [
+                    [
+                      "add_effect_amount",
+                      "color",
+                      [
+                        "calc_rand",
+                        [
+                          "number",
+                          "0.1",
+                        ],
+                        [
+                          "number",
+                          "0.3",
+                        ],
+                      ],
+                    ],
+                  ],
+                ],
+              ],
+            ],
+            [
+              "when_object_click",
+              [
+                [
+                  "set_variable",
+                  "vmyg",
+                  [
+                    "text",
+                    "Guest",
+                  ],
+                ],
+                [
+                  "_if",
+                  [
+                    "boolean_basic_operator",
+                    [
+                      "get_variable",
+                      "doxd",
+                    ],
+                    "EQUAL",
+                    [
+                      "text",
+                      "0",
+                    ],
+                  ],
+                  [
+                    [
+                      "set_variable",
+                      "nx3g",
+                      [
+                        "text",
+                        "0",
+                      ],
+                    ],
+                    [
+                      "message_cast",
+                      "evpi",
+                    ],
+                    [
+                      "set_variable",
+                      "doxd",
+                      [
+                        "text",
+                        "1",
+                      ],
+                    ],
+                  ],
+                ],
+                [
+                  "start_scene",
+                  "7dwq",
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      294,
+                    ],
+                    [
+                      "set height",
+                      58,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_back",
+            },
+          ],
+          name: "Locked_Cube_back1",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  91.54,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "dc5l",
+              [
+                [
+                  "text_flush",
+                ],
+                [
+                  "text_write",
+                  [
+                    "value_of_index_from_list",
+                    "dnn4",
+                    [
+                      "number",
+                      "3",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "   ",
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "value_of_index_from_list",
+                    "23yd",
+                    [
+                      "number",
+                      "3",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "점",
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자13",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  91.54,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "dc5l",
+              [
+                [
+                  "text_flush",
+                ],
+                [
+                  "text_write",
+                  [
+                    "value_of_index_from_list",
+                    "dnn4",
+                    [
+                      "number",
+                      "2",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "   ",
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "value_of_index_from_list",
+                    "23yd",
+                    [
+                      "number",
+                      "2",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "점",
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자12",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  91.54,
+                ],
+                [
+                  "set height",
+                  24,
+                ],
+              ],
+            ],
+            [
+              "when_message_cast",
+              "dc5l",
+              [
+                [
+                  "text_flush",
+                ],
+                [
+                  "text_write",
+                  [
+                    "value_of_index_from_list",
+                    "dnn4",
+                    [
+                      "number",
+                      "1",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "   ",
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "value_of_index_from_list",
+                    "23yd",
+                    [
+                      "number",
+                      "1",
+                    ],
+                  ],
+                ],
+                [
+                  "text_append",
+                  [
+                    "text",
+                    "점",
+                  ],
+                ],
+              ],
+            ],
+          ],
+          children: [],
+          name: "글상자11",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  122,
+                ],
+                [
+                  "set height",
+                  56,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      122,
+                    ],
+                    [
+                      "set height",
+                      56,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_third",
+            },
+          ],
+          name: "Locked_Cube_third",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  128,
+                ],
+                [
+                  "set height",
+                  56,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      128,
+                    ],
+                    [
+                      "set height",
+                      56,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_next",
+            },
+          ],
+          name: "Locked_Cube_next",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  102,
+                ],
+                [
+                  "set height",
+                  56,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      102,
+                    ],
+                    [
+                      "set height",
+                      56,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_First",
+            },
+          ],
+          name: "Locked_Cube_First",
+        },
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  291,
+                ],
+                [
+                  "set height",
+                  69,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      291,
+                    ],
+                    [
+                      "set height",
+                      69,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "Locked_Cube_Rank",
+            },
+          ],
+          name: "Locked_Cube_Rank1",
+        },
+      ],
+      name: "Ranking",
+    },
+    {
+      blocks: [],
+      children: [
+        {
+          blocks: [
+            [
+              "when init",
+              [
+                [
+                  "set width",
+                  314,
+                ],
+                [
+                  "set height",
+                  177,
+                ],
+              ],
+            ],
+          ],
+          children: [
+            {
+              blocks: [
+                [
+                  "when init",
+                  [
+                    [
+                      "set width",
+                      314,
+                    ],
+                    [
+                      "set height",
+                      177,
+                    ],
+                  ],
+                ],
+              ],
+              children: [],
+              name: "4.png",
+            },
+          ],
+          name: "4.png",
+        },
+      ],
+      name: "장면 2",
+    },
+  ],
+  name: "Locked_Cube 8Bit",
+}
+`;

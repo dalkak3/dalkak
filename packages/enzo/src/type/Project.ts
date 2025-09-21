@@ -1,4 +1,4 @@
-import { z } from "../../deps/zod.ts"
+import { z } from "../../../../deps/zod.ts"
 
 import { Block, scriptSchema } from "./Script.ts"
 import { objectSchema } from "./Object_.ts"

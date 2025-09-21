@@ -1,4 +1,4 @@
-import { z } from "../../deps/zod.ts"
+import { z } from "../../../../deps/zod.ts"
 
 import { scriptSchema } from "./Script.ts"
 import { entryId, jsonString } from "./util.ts"

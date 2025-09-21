@@ -1,5 +1,5 @@
 import { projectSchema } from "../src/type/mod.ts"
-import { cases } from "../deps/ente.ts"
+import { cases } from "../../../deps/ente.ts"
 
 Deno.test("test", () => {
     Object.entries(cases).forEach(([name, project]) => {

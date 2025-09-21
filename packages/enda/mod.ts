@@ -1,4 +1,3 @@
-// @ts-types="https://denopkg.com/dalkak3/enzo@da2212c/src/type/mod.ts"
 import {
     projectSchema,
     objectSchema,
@@ -6,7 +5,7 @@ import {
     soundSchema,
     blockSchema,
     commentSchema
-} from "https://esm.sh/gh/dalkak3/enzo@da2212c/src/type/mod.ts"
+} from "../../../enzo/src/type/mod.ts"
 
 import { Block, Folder, Literal } from "./src/type.ts"
 
@@ -86,7 +85,7 @@ const Object_ =
     ],
 )
 
-const Project =
+export const Project =
 (project: Project) =>
     Folder(project.name || project.id || "Unnamed Project", [
         ...project.scenes.map(scene => Folder(scene.name, [
@@ -95,13 +94,3 @@ const Project =
                 .map(Object_)
         ])),
     ])
-
-import { proj_57d79d29a76b6b017780b483 as proj } from "https://esm.sh/gh/dalkak3/ente@0.1.1/case/mod.ts?standalone"
-
-console.log(
-    JSON.stringify(
-        Project(projectSchema.parse(proj)),
-        undefined,
-        2,
-    )
-)

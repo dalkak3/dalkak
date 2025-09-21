@@ -1,4 +1,4 @@
-import { z } from "../../deps/zod.ts"
+import { z } from "../../../../deps/zod.ts"
 
 import { entryId } from "./util.ts"
 
