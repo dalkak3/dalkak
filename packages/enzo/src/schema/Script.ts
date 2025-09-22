@@ -2,11 +2,22 @@ import { z } from "../../../../deps/zod.ts"
 
 import { entryId } from "./util.ts"
 
+import blockTypesSrc_ from "../../static/blockTypes.json" with { type: "json" }
+
+const blockTypesSrc = Object.keys(blockTypesSrc_) as (keyof typeof blockTypesSrc_)[]
+
+const BlockType = z.union([
+    z.enum(blockTypesSrc).exclude(["comment"]),
+    z.templateLiteral(["func_", entryId]),
+    z.templateLiteral(["stringParam_", entryId]),
+    z.templateLiteral(["booleanParam_", entryId]),
+])
+
 export interface Block {
     id: string
     x?: number
     y?: number
-    type: string
+    type: z.infer<typeof BlockType>
     params: (Block | number | string | null)[]
     statements?: (Block[] | undefined)[]
     movable?: null
@@ -18,17 +29,17 @@ export interface Block {
     extensions?: []
 }
 
-export const blockSchema: z.ZodSchema<Block> = z.lazy(() =>
+export const Block: z.ZodSchema<Block> = z.lazy(() =>
     z.strictObject({
         id: entryId,
         x: z.number().optional(),
         y: z.number().optional(),
-        type: z.string().refine(x => x != "comment"),
+        type: BlockType,
         params: z.array(
-            z.union([blockSchema, z.number(), z.string()]).nullable(),
+            z.union([Block, z.number(), z.string()]).nullable(),
         ),
         statements: z
-            .array(z.union([z.array(blockSchema), z.undefined()]))
+            .array(z.union([z.array(Block), z.undefined()]))
             .optional(),
         movable: z.null().optional(),
         deletable: z.union([z.literal(1), z.literal(false)]).optional(),
@@ -37,11 +48,11 @@ export const blockSchema: z.ZodSchema<Block> = z.lazy(() =>
         copyable: z.boolean().optional(),
         assemble: z.boolean().optional(),
         extensions: z.tuple([]).optional(),
-        comment: commentSchema.optional(),
+        comment: Comment.optional(),
     })
 )
 
-export const commentSchema = z.strictObject({
+export const Comment = z.strictObject({
     id: entryId.optional(),
     x: z.number(),
     y: z.number(),
@@ -57,8 +68,8 @@ export const commentSchema = z.strictObject({
     type: z.literal("comment"),
 })
 
-export const scriptSchema = z.array(
+export const Script = z.array(
     z.array(
-        z.union([blockSchema, commentSchema])
+        z.union([Block, Comment])
     ),
 )
