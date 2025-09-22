@@ -2,11 +2,22 @@ import { z } from "../../../../deps/zod.ts"
 
 import { entryId } from "./util.ts"
 
+import blockTypesSrc_ from "../../static/blockTypes.json" with { type: "json" }
+
+const blockTypesSrc = Object.keys(blockTypesSrc_) as (keyof typeof blockTypesSrc_)[]
+
+const BlockType = z.union([
+    z.enum(blockTypesSrc).exclude(["comment"]),
+    z.templateLiteral(["func_", entryId]),
+    z.templateLiteral(["stringParam_", entryId]),
+    z.templateLiteral(["booleanParam_", entryId]),
+])
+
 export interface Block {
     id: string
     x?: number
     y?: number
-    type: string
+    type: z.infer<typeof BlockType>
     params: (Block | number | string | null)[]
     statements?: (Block[] | undefined)[]
     movable?: null
@@ -23,7 +34,7 @@ export const Block: z.ZodSchema<Block> = z.lazy(() =>
         id: entryId,
         x: z.number().optional(),
         y: z.number().optional(),
-        type: z.string().refine(x => x != "comment"),
+        type: BlockType,
         params: z.array(
             z.union([Block, z.number(), z.string()]).nullable(),
         ),
