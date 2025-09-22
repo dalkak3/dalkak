@@ -19,6 +19,7 @@ export interface Block {
     y?: number
     type: z.infer<typeof BlockType>
     params: (Block | number | string | null)[]
+    _backupParams?: (Block | number | string | null)[]
     statements?: (Block[] | undefined)[]
     movable?: null
     deletable?: false | 1
@@ -38,6 +39,9 @@ export const Block: z.ZodSchema<Block> = z.lazy(() =>
         params: z.array(
             z.union([Block, z.number(), z.string()]).nullable(),
         ),
+        _backupParams: z.array(
+            z.union([Block, z.number(), z.string()]).nullable(),
+        ).optional(),
         statements: z
             .array(z.union([z.array(Block), z.undefined()]))
             .optional(),

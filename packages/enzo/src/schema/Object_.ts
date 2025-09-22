@@ -12,7 +12,10 @@ export const Picture = z.strictObject({
     dimension: z.strictObject({
         width: z.number().min(0),
         height: z.number().min(0),
-        scaleX: z.number().min(0).optional(),
+
+        scaleX: z.number().min(-1).optional(),
+            // min(-1): this is not a typo (sigh)
+
         scaleY: z.number().min(0).optional(),
     }),
     scale: z.number().optional(),
@@ -32,7 +35,7 @@ export const Sound = z.strictObject({
     ext: z.literal(".mp3").optional(),
 })
 
-const color = z.string().regex(/^#[0-9A-F]{6}|#[0-9a-f]{6}$/)
+const color = z.string().regex(/^#[0-9A-F]{6}|#[0-9a-f]{6}$|#[0-9a-f]{8}$/)
 
 export const Object_ = z.strictObject({
     _id: z.hex().length(24).optional(),
@@ -51,7 +54,10 @@ export const Object_ = z.strictObject({
         y: z.number(),
         regX: z.number(),
         regY: z.number(),
-        scaleX: z.number().min(0),
+
+        scaleX: z.number().min(-1),
+            // min(-1): this is not a typo (sigh)
+        
         scaleY: z.number().min(0),
         width: z.number().min(0),
         height: z.number().min(0),
@@ -86,6 +92,7 @@ export const Object_ = z.strictObject({
                 "SDYongbi",
                 "Nanum Gothic Coding",
                 "KoPub Batang",
+                "NanumSquareWebfont",
             ]),
         ]).nullable(),
         bgColor: z.union([color, z.literal("transparent")]).optional(),

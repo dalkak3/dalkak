@@ -42,6 +42,7 @@ export const Variable = z.strictObject({
     object: entryId.nullable(),
     array: z.array(
         z.strictObject({
+            _key: z.string().regex(/^[0-9a-z]{33}$/).optional(),
             key: z.string().regex(/^[0-9a-z]{33}$/).optional(),
             data: z.union([z.string(), z.number()]).nullable(),
         }),
@@ -70,7 +71,7 @@ export const Function = z.strictObject({
         .array(
             z.strictObject({
                 name: z.string(),
-                value: z.number(),
+                value: z.union([z.string(), z.number()]),
                 id: z.string().regex(/^[0-9a-z]{4}_[0-9a-z]{4}$/),
             }),
         )
@@ -107,7 +108,7 @@ export const Table = z.strictObject({
     chart: z.array(z.never()),
     data: z.array(z.strictObject({
         key: z.string().regex(/^[0-9a-z]{33}$/),
-        value: z.array(z.number()),
+        value: z.array(z.union([z.string(), z.number()])),
     })),
     fields: z.array(z.string()),
     name: z.string(),

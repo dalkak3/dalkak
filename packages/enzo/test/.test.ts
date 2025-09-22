@@ -7,7 +7,14 @@ Deno.test("test", () => {
         const result = Project.safeParse(project, { reportInput: true })
 
         if (!result.success) {
-            console.log(JSON.parse(result.error.message))
+            Deno.writeTextFileSync(
+                ".log.json",
+                JSON.stringify(
+                    JSON.parse(result.error.message),
+                    undefined,
+                    2,
+                ),
+            )
             throw new Error(`Zod validation failed on "${name}"`)
         }
     })
