@@ -4,6 +4,22 @@ import { Block, Script } from "./Script.ts"
 import { Object_ } from "./Object_.ts"
 import { entryId, jsonString } from "./util.ts"
 
+const saneNumber =
+(input: number | string) => {
+    if (typeof input == "number") {
+        return input
+    }
+    if (input.match(/^[-+]?\d*(\.\d+)?$/)) {
+        return Number(input)
+    } else {
+        return input
+    }
+}
+
+const numberLike = z.union([z.string(), z.number()])
+    .pipe(z.transform(saneNumber))
+    .pipe(z.number())
+
 export const Variable = z.strictObject({
     name: z.string(),
     variableType: z.enum([
@@ -15,8 +31,8 @@ export const Variable = z.strictObject({
     ]),
     id: entryId,
     value: z.union([z.string(), z.number()]).optional(),
-    minValue: z.union([z.string(), z.number()]).optional(),
-    maxValue: z.union([z.string(), z.number()]).optional(),
+    minValue: numberLike.optional(),
+    maxValue: numberLike.optional(),
     visible: z.boolean(),
     x: z.number(),
     y: z.number(),
