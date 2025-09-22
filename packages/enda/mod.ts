@@ -5,7 +5,7 @@ import {
     soundSchema,
     blockSchema,
     commentSchema
-} from "../enzo/src/type/mod.ts"
+} from "../enzo/src/schema/mod.ts"
 
 import { Block, Folder, Literal } from "./src/type.ts"
 

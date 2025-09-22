@@ -1,4 +1,4 @@
-import { projectSchema } from "../src/type/mod.ts"
+import { projectSchema } from "../src/schema/mod.ts"
 import { cases } from "../../../deps/ente.ts"
 
 Deno.test("test", () => {
