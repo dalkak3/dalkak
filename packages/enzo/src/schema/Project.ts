@@ -1,10 +1,10 @@
 import { z } from "../../../../deps/zod.ts"
 
-import { Block, scriptSchema } from "./Script.ts"
-import { objectSchema } from "./Object_.ts"
+import { Block, Script } from "./Script.ts"
+import { Object_ } from "./Object_.ts"
 import { entryId, jsonString } from "./util.ts"
 
-export const variableSchema = z.strictObject({
+export const Variable = z.strictObject({
     name: z.string(),
     variableType: z.enum([
         "variable",
@@ -34,19 +34,19 @@ export const variableSchema = z.strictObject({
     cloudDate: z.literal(false).optional(),
 })
 
-export const messageSchema = z.strictObject({
+export const Message = z.strictObject({
     _id: z.hex().length(24).optional(),
     name: z.string(),
     id: entryId,
 })
 
-export const sceneSchema = z.strictObject({
+export const Scene = z.strictObject({
     _id: z.hex().length(24).optional(),
     name: z.string(),
     id: entryId,
 })
 
-export const functionSchema = z.strictObject({
+export const Function = z.strictObject({
     id: entryId,
     type: z.enum(["normal", "value"])
         .optional(),
@@ -60,7 +60,7 @@ export const functionSchema = z.strictObject({
         )
         .optional(),
     useLocalVariables: z.boolean().optional(),
-    content: jsonString(scriptSchema)
+    content: jsonString(Script)
         .refine(blockss => blockss
             .filter(blocks =>
                 blocks[0].type == "function_create"
@@ -85,7 +85,7 @@ export const functionSchema = z.strictObject({
     fieldNames: z.array(z.never()).optional(),
 })
 
-export const tableSchema = z.strictObject({
+export const Table = z.strictObject({
     _id: z.hex().length(24),
     id: entryId,
     chart: z.array(z.never()),
@@ -103,23 +103,23 @@ export const tableSchema = z.strictObject({
     __v: z.literal(0),
 })
 
-export const projectSchema = z.strictObject({
+export const Project = z.strictObject({
     id: z.hex().length(24).optional(),
     updated: z.iso.datetime().optional(),
     name: z.string().optional(),
     thumb: z.string().regex(/^\/?uploads\/thumb\/[0-9a-f]{4}\/[0-9a-f]{24}\.png$/).optional(),
     cloudVariable: z.union([
-        jsonString(z.array(variableSchema)),
-        z.array(variableSchema),
+        jsonString(z.array(Variable)),
+        z.array(Variable),
     ]).optional(),
 
     speed: z.number().optional(),
-    objects: z.array(objectSchema),
-    variables: z.array(variableSchema),
-    messages: z.array(messageSchema),
-    functions: z.array(functionSchema),
-    scenes: z.array(sceneSchema),
-    tables: z.array(tableSchema),
+    objects: z.array(Object_),
+    variables: z.array(Variable),
+    messages: z.array(Message),
+    functions: z.array(Function),
+    scenes: z.array(Scene),
+    tables: z.array(Table),
     interface: z.object({
         menuWidth: z.literal(280).optional(),
         canvasWidth: z.number().min(0),

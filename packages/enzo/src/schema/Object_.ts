@@ -1,11 +1,11 @@
 import { z } from "../../../../deps/zod.ts"
 
-import { scriptSchema } from "./Script.ts"
+import { Script } from "./Script.ts"
 import { entryId, jsonString } from "./util.ts"
 
 const filename = z.string().regex(/^[0-9a-z]{32}$/)
 
-export const pictureSchema = z.strictObject({
+export const Picture = z.strictObject({
     _id: z.hex().length(24).optional(),
     id: entryId,
     name: z.string(),
@@ -22,7 +22,7 @@ export const pictureSchema = z.strictObject({
     thumbUrl: z.string().optional(),
 })
 
-export const soundSchema = z.strictObject({
+export const Sound = z.strictObject({
     _id: z.hex().length(24).optional(),
     id: entryId,
     name: z.string(),
@@ -34,7 +34,7 @@ export const soundSchema = z.strictObject({
 
 const color = z.string().regex(/^#[0-9A-F]{6}|#[0-9a-f]{6}$/)
 
-export const objectSchema = z.strictObject({
+export const Object_ = z.strictObject({
     _id: z.hex().length(24).optional(),
     id: entryId,
     name: z.string(),
@@ -96,10 +96,10 @@ export const objectSchema = z.strictObject({
         text: z.string().optional(),
         fontSize: z.number().optional(),
     }),
-    script: jsonString(scriptSchema),
+    script: jsonString(Script),
     sprite: z.strictObject({
-        pictures: z.array(pictureSchema),
-        sounds: z.array(soundSchema),
+        pictures: z.array(Picture),
+        sounds: z.array(Sound),
     }),
     selectedPictureId: entryId.optional(),
     selectedSoundId: entryId.optional(),

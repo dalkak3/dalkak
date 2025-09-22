@@ -1,20 +1,6 @@
-import {
-    projectSchema,
-    objectSchema,
-    pictureSchema,
-    soundSchema,
-    blockSchema,
-    commentSchema
-} from "../enzo/src/schema/mod.ts"
+import * as e from "../enzo/src/mod.ts"
 
 import { Block, Folder, Literal } from "./src/type.ts"
-
-type Project = ReturnType<typeof projectSchema.parse>
-type Object_ = ReturnType<typeof objectSchema.parse>
-type Picture = ReturnType<typeof pictureSchema.parse>
-type Sound = ReturnType<typeof soundSchema.parse>
-type EntryBlock = ReturnType<typeof blockSchema.parse>
-type Comment = ReturnType<typeof commentSchema.parse>
 
 const meta =
 (record: Record<string, Literal>) => Block(
@@ -24,7 +10,7 @@ const meta =
 )
 
 const Picture =
-(picture: Picture) => Folder(
+(picture: e.Picture) => Folder(
     picture.name,
     [],
     [
@@ -36,7 +22,7 @@ const Picture =
 )
 
 const Sound =
-(sound: Sound) => Folder(
+(sound: e.Sound) => Folder(
     sound.name,
     [],
     [
@@ -47,7 +33,7 @@ const Sound =
 )
 
 const Block_ =
-(block: EntryBlock): Block => [
+(block: e.Block): Block => [
     block.type,
     ...block.params
         .filter(x => x != null)
@@ -58,9 +44,9 @@ const Block_ =
 ]
 
 const BlockGroup =
-(blockOrComments: (EntryBlock | Comment)[]): [] | [Block] => {
+(blockOrComments: (e.Block | e.Comment)[]): [] | [Block] => {
     const blocks = blockOrComments
-        .filter(x => x.type != "comment") as EntryBlock[]
+        .filter(x => x.type != "comment") as e.Block[]
 
     if (blocks.length == 0) return []
 
@@ -70,7 +56,7 @@ const BlockGroup =
 }
 
 const Object_ =
-(object: Object_) => Folder(
+(object: e.Object_) => Folder(
     object.name,
     [
         ...object.sprite.pictures.map(Picture),
@@ -86,7 +72,7 @@ const Object_ =
 )
 
 export const Project =
-(project: Project) =>
+(project: e.Project) =>
     Folder(project.name || project.id || "Unnamed Project", [
         ...project.scenes.map(scene => Folder(scene.name, [
             ...project.objects
